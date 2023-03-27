@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chef</title>
+    <link rel="icon" type="image/png" href="./images/san.png" />
+    <!-- main template css file -->
+    <link rel="stylesheet" href="CSS/all.min.css" />
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,800&display=swap"
+      rel="stylesheet" />
+  </head>
+  <body>
+    <div class="header">
+      <div class="container">
+        <p>
+          CH <span><i class="fa-solid fa-utensils"></i></span>EF
+        </p>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+        <div class="shopping">
+          <i class="fa-solid fa-cart-shopping" onclick="openCart()"></i>
+          <span id="counter">0</span>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="cart">
+        <h2>Cart</h2>
+        <ul id="cartList"></ul>
+        <button class="close" onclick="closeCart()">Close</button>
+      </div>
+    </div>
+    <!-- end header -->
+    <div class="slider">
+      <div class="container">
+        <img src="./images/s1.jpg" class="slide active" />
+        <img src="./images/s2.jpg" class="slide" />
+        <img src="./images/s3.jpg" class="slide" />
+        <img src="./images/s4.jpg" class="slide" />
+        <div class="btn prev" onclick="prevSlide()">&#10094;</div>
+        <div class="btn next" onclick="nextSlide()">&#10095;</div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="section">
+        <p>Choose your preferred order</p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="chosse">
+        <button onclick="chosseBurger()">Burger</button>
+        <button onclick="chosseChecken()">Chicken</button>
+        <button onclick="chosseDrink()">Drink</button>
+      </div>
+    </div>
+    <div id="menu">
+      <div class="container">
+        <div class="burger cata">
+          <div class="card">
+            <img src="./images/b1.png" alt="" />
+            <h3>Big Mac</h3>
+            <p>A juicy beef patty accompanied by cheese,covered with pickles</p>
+            <button class="add">+ Add</button>
+          </div>
+          <div class="card">
+            <img src="./images/b2.png" alt="" />
+            <h3>Small Mac</h3>
+            <p>A juicy beef patty accompanied by cheese,covered with pickles</p>
+            <button class="add">+ Add</button>
+          </div>
+          <div class="card">
+            <img src="./images/b3.png" alt="" />
+            <h3>Big Hack</h3>
+            <p>A juicy beef patty accompanied by cheese,covered with pickles</p>
+            <button class="add">+ Add</button>
+          </div>
+          <div class="card">
+            <img src="./images/b4.png" alt="" />
+            <h3>Big Zack</h3>
+            <p>A juicy beef patty accompanied by cheese,covered with pickles</p>
+            <button class="add">+ Add</button>
+          </div>
+        </div>
+        <div class="checken cata">
+          <div class="card">
+            <img src="./images/c1.png" alt="" />
+            <h3>McChicken</h3>
+            <p>Deliciously crispy chicken topped with mayonnaise</p>
+            <button class="add">+ Add</button>
+          </div>
+          <div class="card">
+            <img src="./images/c2.png" alt="" />
+            <h3>Small Mac Chicken</h3>
+            <p>Deliciously crispy chicken topped with mayonnaise</p>
+            <button class="add">+ Add</button>
+          </div>
+          <div class="card">
+            <img src="./images/c3.png" alt="" />
+            <h3>Big McChicken</h3>
+            <p>Deliciously crispy chicken topped with mayonnaise</p>
+            <button class="add">+ Add</button>
+          </div>
+          <div class="card">
+            <img src="./images/c4.png" alt="" />
+            <h3>Chicken Zack</h3>
+            <p>Deliciously crispy chicken topped with mayonnaise</p>
+            <button class="add">+ Add</button>
+          </div>
+        </div>
+        <div class="drink cata">
+          <div class="card">
+            <img src="./images/d1.png" alt="" />
+            <h3>Fanta</h3>
+            <p>
+              Our Chocolate Milkshake is an indulgence in a cup. Stir it, slurp
+              it, love it.
+            </p>
+            <button class="add">+ Add</button>
+          </div>
+          <div class="card">
+            <img src="./images/d2.png" alt="" />
+            <h3>Anta</h3>
+            <p>
+              Our Chocolate Milkshake is an indulgence in a cup. Stir it, slurp
+              it, love it.
+            </p>
+            <button class="add">+ Add</button>
+          </div>
+          <div class="card">
+            <img src="./images/d3.png" alt="" />
+            <h3>Milk</h3>
+            <p>
+              Our Chocolate Milkshake is an indulgence in a cup. Stir it, slurp
+              it, love it.
+            </p>
+            <button class="add">+ Add</button>
+          </div>
+          <div class="card">
+            <img src="./images/d4.png" alt="" />
+            <h3>white shake</h3>
+            <p>
+              Our Chocolate Milkshake is an indulgence in a cup. Stir it, slurp
+              it, love it.
+            </p>
+            <button class="add">+ Add</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="section">
+        <p>Check out the last offers</p>
+      </div>
+    </div>
+    <!-- offers  -->
+    <div class="slider">
+      <div class="container">
+        <img src="images/pi1.jpg" class="offer active" />
+        <img src="images/pi2.jpg" class="offer" />
+        <img src="images/pi3.jpg" class="offer" />
+        <div class="btn prev" onclick="prev()">&#10094;</div>
+        <div class="btn next" onclick="next()">&#10095;</div>
+      </div>
+    </div>
+
+
+
+
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+    <!-- footer  -->
+
+    <footer>
+      <p class="follow">Follow me.</p>
+      <div class="icons">
+        <a
+          href="https://www.facebook.com/profile.php?id=100035254174088"
+          target="_blank"
+          ><i class="fa-brands fa-facebook"></i
+        ></a>
+        <a href="https://wa.me/+201551533774?text=Hello" target="_blank"
+          ><i class="fa-brands fa-whatsapp"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/abdallah-mohamed-347a59250"
+          target="_blank"
+          ><i class="fa-brands fa-linkedin"></i
+        ></a>
+      </div>
+      <p class="designed">
+        Developed by <span>Abdallah Mohamed</span> .Thanks to Eng/
+        <span>Sara Atef</span>
+      </p>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
